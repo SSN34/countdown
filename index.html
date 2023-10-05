@@ -39,9 +39,9 @@
         };
 
         const fontSizes = {
-            message: WIDTH/10,
-            days: WIDTH/4,
-            time: WIDTH/20,
+            message: WIDTH / 10,
+            days: WIDTH / 4,
+            time: WIDTH / 20,
         };
 
         function draw() {
@@ -50,7 +50,6 @@
             let distance = finalTime - now;
 
             if (distance <= 0) {
-                
                 ctx.font = `bold ${fontSizes.message}px Arial`;
                 ctx.fillStyle = "#cc0000";
 
@@ -75,20 +74,20 @@
 
             ctx.textAlign = "center";
 
-            ctx.fillText(timeleft.days, WIDTH / 2 - fontSizes.days * 0.7, HEIGHT / 2);
+            ctx.fillText(timeleft.days, WIDTH / 2 - fontSizes.days * 0.7, HEIGHT / 2 + fontSizes.days * 0.7 * 0.5);
 
-            ctx.font = `bold ${fontSizes.days *0.6}px Courier`;
+            ctx.font = `bold ${fontSizes.days * 0.6}px Courier`;
             ctx.fillStyle = "#0b5394";
-            ctx.fillText("DAYS", WIDTH / 2 + fontSizes.days * 0.6, HEIGHT / 2 - fontSizes.days * 0.6*0.5);
+            ctx.fillText("DAYS", WIDTH / 2 + fontSizes.days * 0.6, HEIGHT / 2 + fontSizes.days * 0.6 * 0.1);
 
-            ctx.font = `bold ${fontSizes.days *0.25}px Courier`;
+            ctx.font = `bold ${fontSizes.days * 0.25}px Courier`;
             ctx.fillStyle = "#cc0000";
 
             let { hours, minutes, seconds } = timeleft;
             ctx.fillText(
                 `${hours < 10 ? "0" + hours : hours}:${minutes < 10 ? "0" + minutes : minutes}:${seconds < 10 ? "0" + seconds : seconds}`,
-                WIDTH / 2 + fontSizes.days * 0.25*2,
-                HEIGHT / 2
+                WIDTH / 2 + fontSizes.days * 0.25 * 2,
+                HEIGHT / 2 + fontSizes.days * 0.25 * 1.4
             );
 
             setTimeout(() => draw(), 1000);
