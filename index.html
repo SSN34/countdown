@@ -78,7 +78,7 @@
 
             ctx.font = `bold ${fontSizes.days * 0.6}px Courier`;
             ctx.fillStyle = "#0b5394";
-            ctx.fillText("DAYS", WIDTH / 2 + fontSizes.days * 0.6, HEIGHT / 2 + fontSizes.days * 0.6 * 0.1);
+            ctx.fillText(`DAY${timeleft.days == 1 ? "":"S"}`, WIDTH / 2 + fontSizes.days * 0.6, HEIGHT / 2 + fontSizes.days * 0.6 * 0.1);
 
             ctx.font = `bold ${fontSizes.days * 0.29}px Courier`;
             ctx.fillStyle = "#cc0000";
