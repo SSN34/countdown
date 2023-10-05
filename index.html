@@ -80,13 +80,13 @@
             ctx.fillStyle = "#0b5394";
             ctx.fillText("DAYS", WIDTH / 2 + fontSizes.days * 0.6, HEIGHT / 2 + fontSizes.days * 0.6 * 0.1);
 
-            ctx.font = `bold ${fontSizes.days * 0.3}px Courier`;
+            ctx.font = `bold ${fontSizes.days * 0.29}px Courier`;
             ctx.fillStyle = "#cc0000";
 
             let { hours, minutes, seconds } = timeleft;
             ctx.fillText(
                 `${hours < 10 ? "0" + hours : hours}:${minutes < 10 ? "0" + minutes : minutes}:${seconds < 10 ? "0" + seconds : seconds}`,
-                WIDTH / 2 + fontSizes.days * 0.25 * 2.5,
+                WIDTH / 2 + fontSizes.days * 0.25 * 2.4,
                 HEIGHT / 2 + fontSizes.days * 0.25 * 1.4
             );
 
